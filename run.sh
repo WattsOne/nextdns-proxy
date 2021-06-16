@@ -26,6 +26,10 @@ if [ -n "$NEXTDNS_FORWARDING_DOMAIN" ]; then
     fi
 fi
 
+if [ -n "$DNS4ME_API" ]; then
+    wget -q https://dns4me.net/api/v2/get_hosts/hosts/$DNS4ME_API -O /config/dns4me.hosts
+fi
+
 echo "Running nextdns with arguments: $NEXTDNS_ARGUMENTS"
 
 /usr/bin/nextdns run $NEXTDNS_ARGUMENTS
