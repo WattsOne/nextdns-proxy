@@ -1,1 +1,1 @@
-*/5 * * * * /usr/bin/sh /get-dns4me-hosts.sh $DNS4ME_API
+*/5 * * * * bash /get-dns4me-hosts.sh $DNS4ME_API
